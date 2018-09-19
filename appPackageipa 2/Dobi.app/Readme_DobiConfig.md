@@ -1,0 +1,4 @@
+#  Config用于存放全局配置项的Object
+
+DobiTabBarItemConfig：APP首页的tabBarController的item的配置项内容
+DobiUserLoginConfig：用户登录信息

@@ -1,0 +1,8 @@
+#  Category用于存放主工程中所有的共有拓展方法
+
+AFHTTPSessionManager+Dobi：http/https请求的过度方法
+UIView+Rotating：视图旋转动画
+HSYBaseRefleshModel+Language：基类ViewModel的Category，用于监听全局APP内修改语言
+UITableView+CATransaction：动态插入或删除行
+UIViewController+DobiNavItem：添加系统navigationController的navigationBar导航栏按钮，目前处于弃用状态，原因是使用了自定义转场
+UIView+DobiActivity.h：控制器view层状态指示器视图

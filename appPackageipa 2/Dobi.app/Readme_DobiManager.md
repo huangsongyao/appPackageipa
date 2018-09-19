@@ -1,0 +1,5 @@
+#  Manager用于存在整个工程目录下的管理者[单例或工具类]
+
+DobiLocalizedStringManager：应用内设置国际化语言的管理者
+DobiHUDManager：HUD提示标UI的管理者
+DobiAppDelegateManager：APP内工具方法的管理者

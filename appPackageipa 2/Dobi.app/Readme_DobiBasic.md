@@ -1,0 +1,6 @@
+#  Basic用于存放主工程下的所有公共基类[view、controller、object等]
+
+BasicJSONModel：用于存放json映射基类
+BasicView：用于存放cell和view的基类
+BasicViewModel：用于存放VMVC模式中的VM的基类
+BasicViewController：用于存放VMVC模式中的VC的基类

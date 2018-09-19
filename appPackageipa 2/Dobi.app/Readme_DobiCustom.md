@@ -1,0 +1,8 @@
+#  Custom用于存放工程目录中所有的全局通用定制视图[局部定制视图请放置于Classes中]
+
+DobiFirstAppGuideView：首次打开APP的引导页
+DobiRefreshView：定制上拉及下拉的头部视图
+DobiActivityIndicatorView：定制关于各种情况下的状态ActivityIndicator指示器视图
+DobiTableFooterButtonView：定制全局通用的底部next按钮视图
+DobiTextField：定制带边框的自动计算宽度的单行输入框
+DobiWithdrawAlertView：定制弹窗-----提币
