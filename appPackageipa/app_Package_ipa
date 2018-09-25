@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
 #.app包和脚本的绝对路径请保持一致
-#app包名
-App_Name="DOBI"
+#提示用户输入包名，并把包名作为变量保存
+read -p "请输入.app包名，不需携带.app后缀：" App_Name
+echo "即将转换为ipa包的app包名为：$App_Name"
 #获取要打包的.app包的目录的绝对路径
 work_path=$(dirname $0)
 #当前位置跳到脚本位置
