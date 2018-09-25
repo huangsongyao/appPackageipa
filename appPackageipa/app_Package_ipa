@@ -8,20 +8,27 @@ echo "即将转换为ipa包的app包名为：$App_Name"
 work_path=$(dirname $0)
 #当前位置跳到脚本位置
 cd ${work_path}
-#先删除ipaPayload文件夹，避免上次缓存遗留
-rm -rf ipaPayload
-#再创建ipaPayload文件夹
-mkdir ipaPayload
-#在文件夹里面创建Payload文件夹
-mkdir ipaPayload/Payload
-#将当前目录下的App_Name.app复制到Payload里面
-cp -r $App_Name.app ipaPayload/Payload/$App_Name.app
-#移动到ipaPayload文件夹下
-cd ipaPayload
-#压缩多个目录zip FileName.zip 目录1 目录2 目录3...
-#zip -r $App_Name.ipa Payload iTunesArtwork
-#开始打包ipa...
-zip -r $App_Name.ipa Payload
-echo 'package completed!'
+#判断路径下这个文件是否存在
+if [ -d $App_Name.app ];then
+	echo "文件夹存在"
+	#先删除ipaPayload文件夹，避免上次缓存遗留
+	rm -rf ipaPayload
+	#再创建ipaPayload文件夹
+	mkdir ipaPayload
+	#在文件夹里面创建Payload文件夹
+	mkdir ipaPayload/Payload
+	#将当前目录下的App_Name.app复制到Payload里面
+	cp -r $App_Name.app ipaPayload/Payload/$App_Name.app
+	#移动到ipaPayload文件夹下
+	cd ipaPayload
+	#压缩多个目录zip FileName.zip 目录1 目录2 目录3...
+	#zip -r $App_Name.ipa Payload iTunesArtwork
+	#开始打包ipa...
+	zip -r $App_Name.ipa Payload
+	echo 'package completed!'
 
-exit 0
+	exit 0
+else
+	echo "文件不存在"
+	exit 0
+fi

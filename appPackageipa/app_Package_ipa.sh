@@ -8,6 +8,9 @@ echo "即将转换为ipa包的app包名为：$App_Name"
 work_path=$(dirname $0)
 #当前位置跳到脚本位置
 cd ${work_path}
+#判断路径下这个文件是否存在
+if [ -d $App_Name.app ];then
+echo "文件夹存在"
 #先删除ipaPayload文件夹，避免上次缓存遗留
 rm -rf ipaPayload
 #再创建ipaPayload文件夹
@@ -25,3 +28,7 @@ zip -r $App_Name.ipa Payload
 echo 'package completed!'
 
 exit 0
+else
+echo "文件不存在"
+exit 0
+fi
